@@ -1,0 +1,77 @@
+body {
+    background-color: #FCBF00;
+}
+
+.container {
+    height: 100vh;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template: auto / repeat(3, 1fr)
+}
+
+.date {
+    color: #fff;
+    font-size: 1.2rem;
+    grid-column: 3 span;
+    text-align: center;
+}
+
+.band {
+    grid-column: 2 / span 2;
+    margin: 1rem 0;
+    text-align: right;
+}
+
+.disc {
+    color: #fff;
+    grid-column: 1 / span 1;
+    margin: 1rem 0;
+    text-orientation: upright;
+    writing-mode: vertical-lr;
+}
+
+.location {
+    grid-column: 2 / span 2;
+}
+
+.btn-container {
+    grid-column: 2 / span 2; 
+    text-align: center;     
+
+    @include query(600px) {
+        grid-column: 3 / span 1;
+        text-align: left;
+    }
+
+    @include query(600px) {
+        grid-column: 2 / span 1;
+        text-align: center;
+    }
+}
+
+.btn-buy {
+    background-color: transparent;
+    border: 2px solid #FCBF00;
+    color: #FCBF00;
+    padding: .5rem .7rem;
+    text-decoration: none;
+    
+    @media screen and (min-height: 730px) { 
+        background-color: #000;
+        border: 2px solid #FCBF00;
+        color: #FCBF00;
+    }
+
+    @include query(1000px) {
+        background-color: #000;
+        border: 2px solid #FCBF00;
+        color: #FCBF00;
+    }
+}

@@ -1,0 +1,28 @@
+.cat,
+.cat-tail {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.cat {
+    background: url(../img/cat.png) bottom / contain no-repeat;
+    height: 55%;
+    bottom: 0;
+    left: 30%;
+}
+
+.cat-tail {
+    background: url(../img/cat-tail.png) left / contain no-repeat;
+    height: 35%;
+    left: 0;
+    top: 0;
+
+    @include query(375px) {
+        height: 40%;
+    }
+
+    @include query(1000px) {
+        height: 45%;
+    }
+}
